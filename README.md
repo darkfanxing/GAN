@@ -8,9 +8,9 @@ In this project, it will restore image using GAN model, and here is how it works
     1. Yields batches of images from `training_data`. The `training_data`'s shape is `(image_count, image_width, image_hight, image_channel)`
     2. Customize the loss function of discriminator and generator
         - discriminator's loss function
-            - $L_D \triangleq -[\log D(X) + \log(1 - D(G(Y)))]$
+            - ![](https://i.imgur.com/bd0OoXI.png)
         - generator's loss function
-            - $L_G \triangleq \| G(Y) - X \|_1 + \frac{1}{1000} \log(1 - D(G(Y)))$
+            - ![](https://i.imgur.com/TbQ7Fia.png)
     3. Gradient descent with respect to variables of discriminator and generator
         - using `tensorflow.GradientTape` to implement gradient descent
     4. Plot training progress bar in terminal
