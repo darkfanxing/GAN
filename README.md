@@ -1,8 +1,8 @@
 ## Table of contents
 - [Project Description](#project-description)
 - [Project Setup](#project-setup)
-- [Train Model](#train-model)
-- [Predict](#predict)
+- [How To Train Model](#how-to-train-model)
+- [How To Restore Images](#how-to-restore-images)
 
 ## Project Description
 The GAN (Generative Adversarial Netwrok) algorithm is a class of machine learning frameworks designed by Ian Goodfellow and his colleagues in June 2014. It's based on "Game Theory", to make two neural networks contest with each other.
@@ -38,14 +38,14 @@ pipenv shell
 pipenv install
 ```
 
-## Train Model
+## How to train Model
 In model training stage, you can modify the hyper parameter like epochs, learning_rate, learning_rate_decay, etc.
 
 ```console
 python src/train.py
 ```
 
-## Predict
+## How to restore images
 You can use the following model to restore images:
 - the example model `generator_example.h5` at `src/model/trained_model/` 
 - [Other trained model on Google Drive (still building...)](https://drive.google.com/drive/folders/1d431KDCVXYkCfmrGskXQ5vD4FXIJ8nUH?usp=sharing)
