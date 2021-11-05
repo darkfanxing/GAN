@@ -199,7 +199,7 @@ class GAN():
             batch_count = ceil(self.training_data.shape[0]/self.batch_size)
             
             task = progress_bar.add_task(
-                description=f"epoch {epoch}/{self.epochs}",
+                description=f"epoch {epoch+1}/{self.epochs}",
                 total=batch_count,
                 generator_loss=0,
                 discriminator_loss=0,
