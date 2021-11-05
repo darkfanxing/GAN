@@ -1,9 +1,10 @@
+## Table of contents
 - [Project Description](#project-description)
 - [Project Setup](#project-setup)
 - [Train Model](#train-model)
 - [Predict](#predict)
 
-# Project Description
+## Project Description
 The GAN (Generative Adversarial Netwrok) algorithm is a class of machine learning frameworks designed by Ian Goodfellow and his colleagues in June 2014. It's based on "Game Theory", to make two neural networks contest with each other.
 
 In this project, it will restore image using GAN model, and here is how it works:
@@ -26,29 +27,29 @@ In this project, it will restore image using GAN model, and here is how it works
     2. Get any image fits `training_data`'s shape, e.g. `(image_count, image_width, image_hight, image_channel)`
     3. Restore image
 
-# Project Setup
+## Project Setup
 To avoid TensorFlow version conflicts, the project use pipenv (Python vitural environment) to install Python packages.
 
 > **Notice**: Before executing the following command, please refer to this [website](https://www.tensorflow.org/install/source#linux) and modify the TensorFlow version in `Pipfile`
 
-```
+```console
 pip install pipenv
 pipenv shell
 pipenv install
 ```
 
-# Train Model
+## Train Model
 In model training stage, you can modify the hyper parameter like epochs, learning_rate, learning_rate_decay, etc.
 
-```
+```console
 python src/train.py
 ```
 
-# Predict
+## Predict
 You can use the following model to restore images:
 - the example model `generator_example.h5` at `src/model/trained_model/` 
 - [Other trained model on Google Drive (still building...)](https://drive.google.com/drive/folders/1d431KDCVXYkCfmrGskXQ5vD4FXIJ8nUH?usp=sharing)
 
-```
+```console
 python src/predict.py
 ```
