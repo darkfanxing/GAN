@@ -1,7 +1,7 @@
 # Project Description
 The GAN (Generative Adversarial Netwrok) algorithm is a class of machine learning frameworks designed by Ian Goodfellow and his colleagues in June 2014. It's based on "Game Theory", to make two neural networks contest with each other.
 
-In this project, the GAN model is used to restore images, and here is how it works:
+In this project, it will restore image using GAN model, and here is how it works:
 1. Model setup:
     - Build discriminator and generator by using high-level API of Tensorflow 2
 2. Train model:
