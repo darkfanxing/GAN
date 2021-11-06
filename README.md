@@ -44,7 +44,7 @@ pipenv install
 ```
 
 ## How To Train Model In This Project
-In model training stage, you can modify the hyper parameter like epochs, learning_rate, learning_rate_decay, etc.
+In model training stage, you can modify the hyperparameter in `src/model/GAN.py` like epochs, learning_rate, learning_rate_decay, etc.
 
 ```console
 python src/train.py
