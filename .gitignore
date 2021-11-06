@@ -1,2 +1,4 @@
 src/model/trained_model/gan_discriminator/*
 src/model/trained_model/gan_generator/*
+
+*.pyc
