@@ -9,7 +9,11 @@ The GAN (Generative Adversarial Netwrok) algorithm is a class of machine learnin
 
 In this project, it will restore image using GAN model, and here is how it works:
 1. Model setup:
-    - Build discriminator and generator by using high-level API of Tensorflow 2
+    - Build discriminator and generator by using high-level API of Tensorflow 2, the model architecture is shown below:
+        - "k(number)" means a kernel size of "number by number"
+        - "n(number)" means the corresponding block has "number" channels
+        
+        ![](https://i.imgur.com/IQHdCC8.png)
 2. Train model:
     1. Yields batches of images from `training_data`. The `training_data`'s shape is `(image_count, image_width, image_hight, image_channel)`
     2. Put the random mask over data (each picture)
@@ -40,7 +44,7 @@ pipenv install
 ```
 
 ## How To Train Model In This Project
-In model training stage, you can modify the hyper parameter like epochs, learning_rate, learning_rate_decay, etc.
+In model training stage, you can modify the hyperparameter in `src/model/GAN.py` like epochs, learning_rate, learning_rate_decay, etc.
 
 ```console
 python src/train.py
