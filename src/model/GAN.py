@@ -144,7 +144,6 @@ class GAN():
         x = residual_block(x)
         x = Conv2DTranspose(filters=256, kernel_size=(4, 4), strides=(2, 2), output_padding=(1, 1))(x)
         x = Conv2DTranspose(filters=256, kernel_size=(4, 4), strides=(2, 2))(x)
-        x = Dropout(0.3)(x)
         y = Conv2D(filters=image_dimension, kernel_size=(7, 7), padding="same")(x)
 
         self._generator: Model = Model(inputs=input_x, outputs=y, name="Generator")
@@ -157,7 +156,6 @@ class GAN():
 
 
     def _generator_loss_function(self, real_images: ndarray, fake_images: ndarray, validity_of_fake_image: Tensor) -> Tensor:
-        print(type(fake_images))
         images_similarity = K.sum(K.abs(fake_images - real_images))
         images_fidlity = K.sum(0.001*K.log(1 - validity_of_fake_image + K.epsilon()))
         return images_similarity + images_fidlity
@@ -218,11 +216,11 @@ class GAN():
                         advance=1,
                         generator_loss=generator_loss,
                         discriminator_loss=discriminator_loss,
-                        batch_index=batch_index
+                        batch_index=batch_index+1
                     )
 
-            self._discriminator.save(f"src/model/trained_model/gan_discriminator/{epoch}epochs.h5")
-            self._generator.save(f"src/model/trained_model/gan_generator/{epoch}epochs.h5")
+        self._discriminator.save(f"src/model/trained_model/gan_discriminator/example_{self.epochs}epochs.h5")
+        self._generator.save(f"src/model/trained_model/gan_generator/example_{self.epochs}epochs.h5")
 
 
     def predict(self, images: ndarray) -> ndarray:
