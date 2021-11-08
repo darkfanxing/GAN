@@ -44,14 +44,14 @@ pipenv install
 ```
 
 ## How To Train Model In This Project
-In model training stage, you can modify the hyperparameter in `src/model/GAN.py` like epochs, learning_rate, learning_rate_decay, etc.
+In model training stage, you can modify the model architecture or the hyperparameter in `src/model/GAN.py` like epochs, learning_rate, learning_rate_decay, etc.
 
 ```console
 python src/train.py
 ```
 
 ## How To Restore Images In This Project
-You can use the following model to restore images:
+You can use model you trained or apply the following model to restore images:
 - The example model `generator_example.h5` at `src/model/trained_model/` 
 - [Other trained model on Google Drive](https://drive.google.com/drive/folders/1d431KDCVXYkCfmrGskXQ5vD4FXIJ8nUH?usp=sharing)
 
