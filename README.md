@@ -35,7 +35,7 @@ In this project, it will restore image using GAN model, and here is how it works
 ## Project Setup
 To avoid TensorFlow version conflicts, the project use pipenv (Python vitural environment) to install Python packages.
 
-> **Notice**: Before executing the following command, please refer to this [website](https://www.tensorflow.org/install/source#linux) and modify the TensorFlow version in `Pipfile` 
+> **Notice**: Before executing the following command, please refer to [TensorFlow Installation Source](https://www.tensorflow.org/install/source#linux) and modify the TensorFlow version in `Pipfile` 
 
 ```console
 pip install pipenv
