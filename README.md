@@ -53,7 +53,7 @@ python src/train.py
 ## How To Restore Images In This Project
 You can use the following model to restore images:
 - The example model `generator_example.h5` at `src/model/trained_model/` 
-- [Other trained model on Google Drive (still building...)](https://drive.google.com/drive/folders/1d431KDCVXYkCfmrGskXQ5vD4FXIJ8nUH?usp=sharing)
+- [Other trained model on Google Drive](https://drive.google.com/drive/folders/1d431KDCVXYkCfmrGskXQ5vD4FXIJ8nUH?usp=sharing)
 
 ```console
 python src/predict.py
