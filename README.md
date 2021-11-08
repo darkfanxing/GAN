@@ -58,9 +58,3 @@ You can use the following model to restore images:
 ```console
 python src/predict.py
 ```
-
-<style>
-.markdown-body blockquote {
-    border-left-color: red
-}
-</style>
