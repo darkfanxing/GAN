@@ -3,6 +3,7 @@
 - [Project Setup](#project-setup)
 - [How To Train Model In this Project](#how-to-train-model-in-this-project)
 - [How To Restore Images In this Project](#how-to-restore-images-in-this-project)
+- [How To Check Model Architecture](#how-to-check-model-architecture)
 
 ## Project Description
 The GAN (Generative Adversarial Netwrok) algorithm is a class of machine learning frameworks designed by Ian Goodfellow and his colleagues in June 2014. It's based on "Game Theory", to make two neural networks contest with each other.
@@ -57,4 +58,11 @@ You can use model you trained or apply the following model to restore images:
 
 ```console
 python src/predict.py
+```
+
+# How To Check Model Architecture
+You can modify `model_path` in `src/watch_model_architecture.py` to watch any model you want
+
+```console
+python src/watch_model_architecture.py
 ```
